@@ -8,5 +8,6 @@ export const client = createClient({
   headers: {
     'Api-Key': env.DISCOURSE_BOT_TOKEN,
     'Api-Username': env.DISCOURSE_BOT_USERNAME,
+    'X-CF-Bot-Secret': env.CF_BOT_SECRET,
   },
 });

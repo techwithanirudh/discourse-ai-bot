@@ -13,6 +13,8 @@ export const env = createEnv({
     DISCOURSE_BOT_USERNAME: z.string().min(1).default('zenix'),
     DISCOURSE_SIGNING_SECRET: z.string().min(1),
     DISCOURSE_URL: z.string().url().min(1),
+    // Cloudflare bypass secret — matched in WAF rule, only the bot knows this
+    CF_BOT_SECRET: z.string().min(1),
     // AI
     OPENAI_API_KEY: z.string().optional(),
     HACKCLUB_API_KEY: z.string().optional(),
