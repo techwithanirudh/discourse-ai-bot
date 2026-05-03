@@ -8,6 +8,7 @@ export const getBotUser = async () => {
   });
 
   if (!res?.data?.current_user) {
+    console.error('[getBotUser] Session fetch failed:', JSON.stringify({ status: res?.response?.status, error: res?.error, data: res?.data }));
     throw new Error('Session is undefined');
   }
 
