@@ -10,6 +10,7 @@ export const env = createEnv({
   server: {
     // Discourse
     DISCOURSE_BOT_TOKEN: z.string().min(1),
+    DISCOURSE_BOT_USERNAME: z.string().min(1).default('zenix'),
     DISCOURSE_SIGNING_SECRET: z.string().min(1),
     DISCOURSE_URL: z.string().url().min(1),
     // AI

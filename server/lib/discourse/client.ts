@@ -7,5 +7,6 @@ export const client = createClient({
   baseUrl: url,
   headers: {
     'Api-Key': env.DISCOURSE_BOT_TOKEN,
+    'Api-Username': env.DISCOURSE_BOT_USERNAME,
   },
 });
